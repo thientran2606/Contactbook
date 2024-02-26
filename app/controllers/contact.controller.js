@@ -90,10 +90,10 @@ exports.deleteAll = async  (req ,res,next)=>{
     } catch (error) {
         return next(
             new ApiError(500,"An error occurred while removing all contacts")
-        );
+        )
     }
 
-};
+}
 
 exports.findAllFavorite = async  (req ,res,next)=>{
     try {
