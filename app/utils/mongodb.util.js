@@ -1,6 +1,6 @@
-const { MongoClient } = require("mongodb");
+const {MongoClient} = require("mongodb");
 
-class Mongodb {
+class MongoDB {
     static connect = async (uri) => {
         if(this.client) return this.client;
         this.client = await MongoClient.connect(uri);
@@ -8,4 +8,4 @@ class Mongodb {
     };
 }
 
-module.exports = Mongodb;
+module.exports = MongoDB;
