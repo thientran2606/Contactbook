@@ -82,7 +82,7 @@ exports.delete = async  (req, res, next) => {
 
 exports.deleteAll = async  (req ,res,next)=>{
     try{
-        const contactService = new ContactService(MongoDB.client);
+    const contactService = new ContactService(MongoDB.client);
     const deletedCount = await contactService.deleteAll();
     return res.send({
         message: `${deletedCount} contacts were deleted successfully`
